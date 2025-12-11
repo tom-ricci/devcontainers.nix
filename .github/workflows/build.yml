@@ -50,9 +50,10 @@ jobs:
           remove-haskell: "true"
           remove-codeql: "true"
           remove-docker-images: "false"
-          remove-large-packages: "false"
+          remove-large-packages: "true"
           remove-cached-tools: "true"
           remove-swapfile: "false"
+          verbose: "true"
 
       - uses: actions/checkout@v4
 
