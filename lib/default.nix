@@ -455,7 +455,6 @@
           vscodeSettings = {
             "go.toolsManagement.checkForUpdates" = "off";
             "go.toolsManagement.autoUpdate" = false;
-            "go.logging.level" = "verbose";
           };
           alias = {
             go-build = ''go build -trimpath -ldflags "-s -w -buildid="'';
@@ -1582,11 +1581,14 @@
               "**/zshenv" = true;
               "**/*.zsh-theme" = true;
             };
-            "shellcheck.ignoreFileSchemes" = [
-              "git"
-              "gitfs"
-              "output"
-            ];
+            # "shellcheck.ignoreFileSchemes" = [
+            #   "git"
+            #   "gitfs"
+            #   "output"
+            # ];
+            "shellcheck.disableVersionCheck" = true;
+            "shellcheck.logLevel" = "debug";
+            # "shellcheck.useWorkspaceRootAsCwd" = true;
           };
         };
 
@@ -2001,7 +2003,9 @@
             ianandhum.protobuf-support
           ];
           vscodeSettings = {
-            "protobuf-support.protols.path" = pkgs.lib.getExe' pkgs.protols "protols";
+            "protobuf-support.protols" = {
+              path = pkgs.lib.getExe' pkgs.protols "protols";
+            };
           };
         };
 
