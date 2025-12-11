@@ -56,10 +56,12 @@
 
       layers = [
         {
+          name = "";
           deps = [];
         }
         # for copyToRoot
         {
+          name = "";
           paths = [];
           pathsToLink = [];
         }
