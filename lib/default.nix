@@ -1943,7 +1943,7 @@
           ];
           extensions = with (pkgs.forVSCodeVersion pkgs.vscode.version).vscode-marketplace; [
             # https://github.com/RooVetGit/Roo-Code
-            rooveterinaryinc.roo-cline
+            rooveterinaryinc.roo-code-nightly
           ];
           vscodeSettings = {
             # disable bundled GitHub Copilot
@@ -1967,18 +1967,18 @@
             "chat.disableAIFeatures" = true;
             "inlineChat.enableV2" = false;
 
-            "roo-cline.allowedCommands" = [
+            "roo-code-nightly.allowedCommands" = [
               "git log"
               "git diff"
               "git show"
             ];
-            "roo-cline.deniedCommands" = [ ];
+            "roo-code-nightly.deniedCommands" = [ ];
           };
           onLogin = {
             "write default mcp json" = {
               command = ''
-                mkdir -p ~/.vscode-server/data/User/globalStorage/rooveterinaryinc.roo-cline/settings
-                echo '${builtins.toJSON mcpServers}' > ~/.vscode-server/data/User/globalStorage/rooveterinaryinc.roo-cline/settings/mcp_settings.json
+                mkdir -p ~/.vscode-server/data/User/globalStorage/rooveterinaryinc.roo-code-nightly/settings
+                echo '${builtins.toJSON mcpServers}' > ~/.vscode-server/data/User/globalStorage/rooveterinaryinc.roo-code-nightly/settings/mcp_settings.json
               '';
               once = true;
             };
