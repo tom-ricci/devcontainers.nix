@@ -826,6 +826,8 @@
             rustBin
           ]
           ++ (with pkgs; [
+            rustup
+
             openssl
 
             # stdenv.cc
