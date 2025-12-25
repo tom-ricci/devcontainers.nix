@@ -576,6 +576,31 @@
                   ]);
               };
 
+              flutter-rust = self.lib.mkManuallyLayeredDevcontainer {
+                inherit pkgs withNix;
+                tag = "rust";
+                name = "ghcr.io/hellodword/devcontainers-flutter";
+                features =
+                  commonFeats
+                  ++ (with self.lib.features; [
+                    (dart { })
+                    (flutter { })
+
+                    (java {
+                      jdkPackage = pkgs.jdk17;
+                      layered = false;
+                    })
+                    (android-sdk {
+                      androidComposition = (self.lib.generateAndroidCompositionFromFlutter pkgs pkgs.flutter);
+                    })
+
+                    (rust { })
+                    (cpp { })
+
+                    (fontconfig { })
+                  ]);
+              };
+
               android = self.lib.mkManuallyLayeredDevcontainer {
                 inherit pkgs withNix;
                 name = "ghcr.io/hellodword/devcontainers-android";
