@@ -9,7 +9,7 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
     nix2container = {
-      url = "github:nlewo/nix2container";
+      url = "github:nlewo/nix2container/b1579412e48c7e187bc23d4779de75d83c3a6bbb";
       # inputs.nixpkgs.follows = "nixpkgs";
     };
     rust-overlay = {
