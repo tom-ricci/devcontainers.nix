@@ -564,7 +564,7 @@ let
   mergeListAttrs =
     attr1: attr2:
     builtins.listToAttrs (
-      builtins.map
+      map
         (attrName: {
           name = attrName;
           value = (attr1.${attrName} or [ ]) ++ (attr2.${attrName} or [ ]);
@@ -811,7 +811,7 @@ pkgs.nix2container.buildImage {
 
   config = {
     User = "${username}:${username}";
-    Env = map (x: "${x}=${builtins.toString envVarsFull."${x}"}") (builtins.attrNames envVarsFull);
+    Env = map (x: "${x}=${toString envVarsFull."${x}"}") (builtins.attrNames envVarsFull);
     Labels = {
       "devcontainer.metadata" = builtins.toJSON metadataFull;
     };

@@ -799,7 +799,7 @@
                 lib = pkgs.lib;
                 goLatest = pkgs.go;
                 versionWithoutMinor = version: "1.${builtins.elemAt (lib.splitString "." version) 1}";
-                goLastMajor = builtins.toString (
+                goLastMajor = toString (
                   (lib.strings.toInt (builtins.elemAt (lib.splitString "." goLatest.version) 1)) - 1
                 );
                 goLast = pkgs."go_1_${goLastMajor}";
