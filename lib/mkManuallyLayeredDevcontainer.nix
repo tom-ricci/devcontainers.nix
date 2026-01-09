@@ -80,7 +80,7 @@ let
     users = {
       root = {
         uid = 0;
-        shell = "${pkgs.bashInteractive}/bin/bash";
+        shell = "/bin/bash"; # "${pkgs.bashInteractive}/bin/bash";
         home = "/root";
         gid = 0;
         groups = [ "root" ];
@@ -89,7 +89,7 @@ let
 
       ${username} = {
         uid = uid;
-        shell = "${pkgs.bashInteractive}/bin/bash";
+        shell = "/bin/bash"; # "${pkgs.bashInteractive}/bin/bash";
         home = "/home/${username}";
         gid = gid;
         groups = [ username ];
@@ -103,7 +103,9 @@ let
     };
 
     libraries = [ ];
-    executables = [ pkgs.bashInteractive ];
+    executables = [
+      # pkgs.bashInteractive
+    ];
 
     layers = [
       {
@@ -279,6 +281,10 @@ let
       gnugrep
     ];
 
+    envVars = {
+      PATH = "/bin:/usr/bin";
+    };
+
     layers = [
       {
         name = "packages for vscode runtime";
@@ -299,9 +305,6 @@ let
           "/usr/bin"
           "/etc"
         ];
-        envVars = {
-          PATH = "/bin:/usr/bin";
-        };
       }
       {
         name = "/lib64 for vscode runtime";
