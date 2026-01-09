@@ -598,6 +598,20 @@
                     (cpp { })
 
                     (fontconfig { })
+
+                    (
+                      { pkgs, ... }:
+                      {
+                        name = "flutter_rust_bridge_codegen";
+                        layered = false;
+                        executables = with pkgs; [
+                          flutter_rust_bridge_codegen
+                          sqlite
+                          sqlx-cli
+                          sqlitebrowser
+                        ];
+                      }
+                    )
                   ]);
               };
 
