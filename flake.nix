@@ -92,7 +92,7 @@
             self.lib.mkManuallyLayeredDevcontainer {
               inherit pkgs withNix;
               tag = "windows";
-              name = "ghcr.io/hellodword/devcontainers-frida";
+              name = "ghcr.io/tom-ricci/devcontainers-frida";
               features =
                 commonFeats
                 ++ (with self.lib.features; [
@@ -143,7 +143,7 @@
             self.lib.mkManuallyLayeredDevcontainer {
               inherit pkgs withNix;
               tag = "win64-zigcc";
-              name = "ghcr.io/hellodword/devcontainers-go";
+              name = "ghcr.io/tom-ricci/devcontainers-go";
               features =
                 commonFeats
                 ++ (with self.lib.features; [
@@ -172,7 +172,7 @@
             self.lib.mkManuallyLayeredDevcontainer {
               inherit pkgs withNix;
               tag = "android";
-              name = "ghcr.io/hellodword/devcontainers-frida";
+              name = "ghcr.io/tom-ricci/devcontainers-frida";
               features =
                 commonFeats
                 ++ (with self.lib.features; [
@@ -383,18 +383,18 @@
 
               base = self.lib.mkManuallyLayeredDevcontainer {
                 inherit pkgs;
-                name = "ghcr.io/hellodword/devcontainers-base";
+                name = "ghcr.io/tom-ricci/devcontainers-base";
               };
 
               dev = self.lib.mkManuallyLayeredDevcontainer {
                 inherit pkgs withNix;
-                name = "ghcr.io/hellodword/devcontainers-dev";
+                name = "ghcr.io/tom-ricci/devcontainers-dev";
                 features = commonFeats;
               };
 
               nix = self.lib.mkManuallyLayeredDevcontainer {
                 inherit pkgs withNix;
-                name = "ghcr.io/hellodword/devcontainers-nix";
+                name = "ghcr.io/tom-ricci/devcontainers-nix";
                 features =
                   commonFeats
                   ++ (with self.lib.features; [
@@ -404,7 +404,7 @@
 
               cpp = self.lib.mkManuallyLayeredDevcontainer {
                 inherit pkgs withNix;
-                name = "ghcr.io/hellodword/devcontainers-cpp";
+                name = "ghcr.io/tom-ricci/devcontainers-cpp";
                 features =
                   commonFeats
                   ++ (with self.lib.features; [
@@ -418,7 +418,7 @@
 
               # vala = self.lib.mkManuallyLayeredDevcontainer {
               #   inherit pkgs withNix;
-              #   name = "ghcr.io/hellodword/devcontainers-vala";
+              #   name = "ghcr.io/tom-ricci/devcontainers-vala";
               #   features =
               #     commonFeats
               #     ++ (with self.lib.features; [
@@ -432,7 +432,7 @@
 
               rust = self.lib.mkManuallyLayeredDevcontainer {
                 inherit pkgs withNix;
-                name = "ghcr.io/hellodword/devcontainers-rust";
+                name = "ghcr.io/tom-ricci/devcontainers-rust";
                 features =
                   commonFeats
                   ++ (with self.lib.features; [
@@ -443,7 +443,7 @@
 
               php = self.lib.mkManuallyLayeredDevcontainer {
                 inherit pkgs withNix;
-                name = "ghcr.io/hellodword/devcontainers-php";
+                name = "ghcr.io/tom-ricci/devcontainers-php";
                 features =
                   commonFeats
                   ++ (with self.lib.features; [
@@ -453,7 +453,7 @@
 
               php-web = self.lib.mkManuallyLayeredDevcontainer {
                 inherit pkgs withNix;
-                name = "ghcr.io/hellodword/devcontainers-php";
+                name = "ghcr.io/tom-ricci/devcontainers-php";
                 tag = "web";
                 features =
                   commonFeats
@@ -465,7 +465,7 @@
 
               # haskell = self.lib.mkManuallyLayeredDevcontainer {
               #   inherit pkgs withNix;
-              #   name = "ghcr.io/hellodword/devcontainers-haskell";
+              #   name = "ghcr.io/tom-ricci/devcontainers-haskell";
               #   features =
               #     commonFeats
               #     ++ (with self.lib.features; [
@@ -476,7 +476,7 @@
 
               dart = self.lib.mkManuallyLayeredDevcontainer {
                 inherit pkgs withNix;
-                name = "ghcr.io/hellodword/devcontainers-dart";
+                name = "ghcr.io/tom-ricci/devcontainers-dart";
                 features =
                   commonFeats
                   ++ (with self.lib.features; [
@@ -486,7 +486,7 @@
 
               # lua = self.lib.mkManuallyLayeredDevcontainer {
               #   inherit pkgs withNix;
-              #   name = "ghcr.io/hellodword/devcontainers-lua";
+              #   name = "ghcr.io/tom-ricci/devcontainers-lua";
               #   features =
               #     commonFeats
               #     ++ (with self.lib.features; [
@@ -496,7 +496,7 @@
 
               zig = self.lib.mkManuallyLayeredDevcontainer {
                 inherit pkgs withNix;
-                name = "ghcr.io/hellodword/devcontainers-zig";
+                name = "ghcr.io/tom-ricci/devcontainers-zig";
                 features =
                   commonFeats
                   ++ (with self.lib.features; [
@@ -506,7 +506,7 @@
 
               writer = self.lib.mkManuallyLayeredDevcontainer {
                 inherit pkgs withNix;
-                name = "ghcr.io/hellodword/devcontainers-writer";
+                name = "ghcr.io/tom-ricci/devcontainers-writer";
                 features = commonFeats ++ [
                   (
                     { ... }:
@@ -521,7 +521,7 @@
 
               # latex = self.lib.mkManuallyLayeredDevcontainer {
               #   inherit pkgs withNix;
-              #   name = "ghcr.io/hellodword/devcontainers-latex";
+              #   name = "ghcr.io/tom-ricci/devcontainers-latex";
               #   features =
               #     commonFeats
               #     ++ (with self.lib.features; [
@@ -531,7 +531,7 @@
 
               # nginx = self.lib.mkManuallyLayeredDevcontainer {
               #   inherit pkgs withNix;
-              #   name = "ghcr.io/hellodword/devcontainers-nginx";
+              #   name = "ghcr.io/tom-ricci/devcontainers-nginx";
               #   features =
               #     commonFeats
               #     ++ (with self.lib.features; [
@@ -542,7 +542,7 @@
               flutter-go = self.lib.mkManuallyLayeredDevcontainer {
                 inherit pkgs withNix;
                 tag = "go";
-                name = "ghcr.io/hellodword/devcontainers-flutter";
+                name = "ghcr.io/tom-ricci/devcontainers-flutter";
                 features =
                   commonFeats
                   ++ (with self.lib.features; [
@@ -579,7 +579,7 @@
               flutter-rust = self.lib.mkManuallyLayeredDevcontainer {
                 inherit pkgs withNix;
                 tag = "rust";
-                name = "ghcr.io/hellodword/devcontainers-flutter";
+                name = "ghcr.io/tom-ricci/devcontainers-flutter";
                 features =
                   commonFeats
                   ++ (with self.lib.features; [
@@ -617,7 +617,7 @@
 
               android = self.lib.mkManuallyLayeredDevcontainer {
                 inherit pkgs withNix;
-                name = "ghcr.io/hellodword/devcontainers-android";
+                name = "ghcr.io/tom-ricci/devcontainers-android";
                 features =
                   commonFeats
                   ++ (with self.lib.features; [
@@ -647,7 +647,7 @@
                   name = "node${formatName tag}";
                   value = self.lib.mkManuallyLayeredDevcontainer {
                     inherit pkgs withNix tag;
-                    name = "ghcr.io/hellodword/devcontainers-node";
+                    name = "ghcr.io/tom-ricci/devcontainers-node";
                     features =
                       commonFeats
                       ++ (with self.lib.features; [
@@ -663,7 +663,7 @@
               python-web = self.lib.mkManuallyLayeredDevcontainer {
                 inherit pkgs withNix;
                 tag = "web";
-                name = "ghcr.io/hellodword/devcontainers-python";
+                name = "ghcr.io/tom-ricci/devcontainers-python";
                 features =
                   commonFeats
                   ++ (with self.lib.features; [
@@ -690,7 +690,7 @@
                   name = "python${formatName tag}";
                   value = self.lib.mkManuallyLayeredDevcontainer {
                     inherit pkgs withNix tag;
-                    name = "ghcr.io/hellodword/devcontainers-python";
+                    name = "ghcr.io/tom-ricci/devcontainers-python";
                     features =
                       commonFeats
                       ++ (with self.lib.features; [
@@ -715,7 +715,7 @@
                   name = "java${formatName tag}";
                   value = self.lib.mkManuallyLayeredDevcontainer {
                     inherit pkgs withNix tag;
-                    name = "ghcr.io/hellodword/devcontainers-java";
+                    name = "ghcr.io/tom-ricci/devcontainers-java";
                     features =
                       commonFeats
                       ++ (with self.lib.features; [
@@ -740,7 +740,7 @@
                   name = "dotnet${formatName tag}";
                   value = self.lib.mkManuallyLayeredDevcontainer {
                     inherit pkgs withNix tag;
-                    name = "ghcr.io/hellodword/devcontainers-dotnet";
+                    name = "ghcr.io/tom-ricci/devcontainers-dotnet";
                     features =
                       commonFeats
                       ++ (with self.lib.features; [
@@ -759,7 +759,7 @@
               go-web = self.lib.mkManuallyLayeredDevcontainer {
                 inherit pkgs withNix;
                 tag = "web";
-                name = "ghcr.io/hellodword/devcontainers-go";
+                name = "ghcr.io/tom-ricci/devcontainers-go";
                 features =
                   commonFeats
                   ++ (with self.lib.features; [
@@ -770,7 +770,7 @@
               go-cc = self.lib.mkManuallyLayeredDevcontainer {
                 inherit pkgs withNix;
                 tag = "cc";
-                name = "ghcr.io/hellodword/devcontainers-go";
+                name = "ghcr.io/tom-ricci/devcontainers-go";
                 features =
                   commonFeats
                   ++ (with self.lib.features; [
@@ -790,7 +790,7 @@
               go-zigcc = self.lib.mkManuallyLayeredDevcontainer {
                 inherit pkgs withNix;
                 tag = "zigcc";
-                name = "ghcr.io/hellodword/devcontainers-go";
+                name = "ghcr.io/tom-ricci/devcontainers-go";
                 features =
                   commonFeats
                   ++ (with self.lib.features; [
@@ -828,7 +828,7 @@
                   name = "go${formatName tag}";
                   value = self.lib.mkManuallyLayeredDevcontainer {
                     inherit pkgs withNix tag;
-                    name = "ghcr.io/hellodword/devcontainers-go";
+                    name = "ghcr.io/tom-ricci/devcontainers-go";
                     features =
                       commonFeats
                       ++ (with self.lib.features; [

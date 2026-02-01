@@ -1,0 +1,12 @@
+services:
+  nginx:
+    image: ghcr.io/skiffos/docker-nixos:latest
+    volumes:
+      - type: tmpfs
+        target: /run
+      - /sys/fs/cgroup:/sys/fs/cgroup:rw
+      - ./nginx.nix:/config/configuration.nix
+      - ./web:/web
+    ports:
+      - "80:80"
+    cgroup: host

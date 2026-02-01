@@ -14,7 +14,7 @@ on:
 
 # # buggy https://github.com/orgs/community/discussions/41518
 # concurrency:
-#   group: "hellodword-devcontainers-nix"
+#   group: "tom-ricci-devcontainers-nix"
 #   cancel-in-progress: false
 
 jobs:

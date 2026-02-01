@@ -1,3 +1,3 @@
 {
-  "image": "ghcr.io/hellodword/devcontainers-nix:latest"
+  "image": "ghcr.io/tom-ricci/devcontainers-nix:latest"
 }
