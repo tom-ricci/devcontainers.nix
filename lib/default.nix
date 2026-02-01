@@ -344,6 +344,12 @@
             man
 
             nix-index-with-db
+
+            busybox
+
+            getent
+
+            
           ];
           envVars = {
             NIX_PAGER = "cat";
